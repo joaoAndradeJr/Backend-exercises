@@ -1,5 +1,7 @@
 'use strict';
 
+const { now } = require("lodash");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Books', {
