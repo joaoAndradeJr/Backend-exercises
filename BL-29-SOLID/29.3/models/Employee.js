@@ -1,3 +1,4 @@
+// models/Employee.js
 module.exports = (sequelize, DataTypes) => {
   const Employee = sequelize.define('Employee', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -6,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     age: DataTypes.INTEGER,
   },
   {
-    timestamps: false,
+    timestamps: false, // remove a obrigatoriedade de utilizar os campos `createdAt` e `updatedAt`
     tableName: 'Employees',
     underscored: true,
   });
